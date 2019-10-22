@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import { SearchbarComponent } from 'common-components';
 
 @Component({
-  selector: 'app-searchbar',
+  selector: 'ex-searchbar',
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss']
 })
-export class SearchbarComponent implements OnInit {
+export class SearchbarExComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
   }
-
 }
+
+// @NgModule({
+//   declarations: [
+//     SearchbarComponent,
+//   ],
+// })
+// export class SearchbarExModule { }

@@ -3,28 +3,32 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestBtnComponent } from './examples/test-btn/test-btn.component';
-import { HamburgerMenuComponent } from './examples/hamburger-menu/hamburger-menu.component';
-import { SearchbarComponent } from './examples/searchbar/searchbar.component';
-import { HideLinkComponent } from './examples/hide-link/hide-link.component';
+
+import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
+import { SearchbarComponent, HideLinkComponent, HamburgerMenuComponent } from 'common-components';
+import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
+import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestBtnComponent,
-    HamburgerMenuComponent,
+
+    SearchbarExComponent,
     SearchbarComponent,
-    HideLinkComponent
+    HideLinkExComponent,
+    HideLinkComponent,
+    HamburgerMenuExComponent,
+    HamburgerMenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   entryComponents:[
-    TestBtnComponent,
-    HamburgerMenuComponent,
-    SearchbarComponent,
-    HideLinkComponent
+    SearchbarExComponent,
+    HideLinkExComponent,
+    HamburgerMenuExComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

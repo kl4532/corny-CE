@@ -1,7 +1,8 @@
 import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
-import { TestBtnComponent } from './examples/test-btn/test-btn.component';
-import { HideLinkComponent } from './examples/hide-link/hide-link.component';
-import { HamburgerMenuComponent } from './examples/hamburger-menu/hamburger-menu.component';
+import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
+import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
+import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-menu.component';
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { HamburgerMenuComponent } from './examples/hamburger-menu/hamburger-menu
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  components = [TestBtnComponent, HideLinkComponent, HamburgerMenuComponent];
+  components = [SearchbarExComponent, HideLinkExComponent, HamburgerMenuExComponent];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
