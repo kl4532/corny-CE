@@ -1,10 +1,24 @@
 <nav>
-    <hamburger-menu hcolor='gray'></hamburger-menu>
-    <div class="tab">tab 1</div>
-    <div class="tab">tab 2</div>
-    <div class="tab">tab 3</div>
+    <div class="navbar">
+  <hamburger-menu hcolor='gray' (visible)="toggleMenu($event)"></hamburger-menu>
+        <div class="tabs">
+            <div class="tab">tab 1</div>
+            <div class="tab">tab 2</div>
+            <div class="tab">tab 3</div>
+            <div class="tab">tab 4</div>
+        </div>
+    </div>
+    <div id="sidemenu" class="sidemenu">
+        <ul>
+            <a href="#top"><li>JUMP top!</li></a>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <a href="#bottom"><li>JUMP bottom!</li></a>
+        </ul>
+    </div> 
 </nav>
-
 <div class="content">
     <div id="top" class="block">Top</div>
     <div class="block"><br>Scroll me</div>

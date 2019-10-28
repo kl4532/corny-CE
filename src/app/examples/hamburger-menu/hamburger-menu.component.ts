@@ -11,5 +11,7 @@ export class HamburgerMenuExComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  toggleMenu(event){
+    document.getElementById("sidemenu").classList.toggle("visible", event);
+  }
 }
