@@ -9,6 +9,9 @@ import { SearchbarComponent, HideLinkComponent, HamburgerMenuComponent } from 'c
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-menu.component';
 
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +27,8 @@ import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-me
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   entryComponents:[
     SearchbarExComponent,
