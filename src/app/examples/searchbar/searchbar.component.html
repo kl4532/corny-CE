@@ -1,1 +1,6 @@
-<searchbar placeholder="Search..."></searchbar>
+<searchbar (value)="this.result = $event" placeholder="Search..."></searchbar>
+
+<ng-container *ngIf="result" >
+    You are looking for <i>{{ result }}</i>
+</ng-container>
+
