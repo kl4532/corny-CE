@@ -4,8 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { SearchbarComponent, HideLinkComponent, HamburgerMenuComponent } from 'corny-components';
+
 import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
-import { SearchbarComponent, HideLinkComponent, HamburgerMenuComponent } from 'common-components';
+
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-menu.component';
 
