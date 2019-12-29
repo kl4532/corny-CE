@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { SearchbarComponent, HideLinkComponent, HamburgerMenuComponent } from 'corny-components';
+import { SearchbarComponent, HideLinkComponent, HamburgerMenuComponent, TreeButtonComponent } from 'corny-components';
 
 import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
 
@@ -13,6 +13,7 @@ import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-me
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     HideLinkExComponent,
     HideLinkComponent,
     HamburgerMenuExComponent,
-    HamburgerMenuComponent
+    HamburgerMenuComponent,
+    TreeButtonExComponent,
+    TreeButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   entryComponents:[
     SearchbarExComponent,
     HideLinkExComponent,
-    HamburgerMenuExComponent
+    HamburgerMenuExComponent,
+    TreeButtonExComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

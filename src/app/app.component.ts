@@ -2,6 +2,7 @@ import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver } from
 import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-menu.component';
+import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-me
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  components = [SearchbarExComponent, HideLinkExComponent, HamburgerMenuExComponent];
+  components = [SearchbarExComponent, HideLinkExComponent, HamburgerMenuExComponent, TreeButtonExComponent];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
