@@ -27,24 +27,52 @@ export class TreeButtonExComponent implements OnInit {
             "name" : "sub1.1.1-last-child"
           } ]
         } ]
-      } ]
+      }]
     }, 
     {
       "id" : 2,
       "name" : "cat2",
       "subcategory" : [ {
         "id" : 2.1,
-        "name" : "sub1"
-      }, {
-        "id" : 2.2,
-        "name" : "sub2"
-      }, {
-        "id" : 2.3,
-        "name" : "sub3"
-      } ]
+        "name" : "sub1",
+        "subcategory" : [ {
+          "id" : 2.11,
+          "name" : "sub1.1",
+          "subcategory" : [ {
+            "id" : 2.111,
+            "name" : "sub1.1.1-last-child"
+          } ]
+        } ]
+      }]
     }, {
       "id" : 3,
-      "name" : "cat3"
+      "name" : "cat3",
+      "subcategory" : [ {
+        "id" : 3.1,
+        "name" : "sub1",
+        "subcategory" : [ {
+          "id" : 3.11,
+          "name" : "sub1.1",
+          "subcategory" : [ {
+            "id" : 3.111,
+            "name" : "sub1.1.1-last-child"
+          } ]
+        } ]
+      },
+      {
+        "id" : 3.2,
+        "name" : "sub1",
+        "subcategory" : [ {
+          "id" : 3.21,
+          "name" : "sub1.1",
+          "subcategory" : [ {
+            "id" : 3.211,
+            "name" : "sub1.1.1-last-child"
+          } ]
+        } ]
+      },
+
+    ]
     }, {
       "id" : 4,
       "name" : "cat4"
