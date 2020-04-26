@@ -1,1 +1,22 @@
-<c-button [btnType]="text-button"></c-button>
+<h3>Button</h3>
+<div class="container">
+    <c-button btnType="button"></c-button>
+    <c-button [disabled]="true" btnType="button"></c-button>
+</div>
+
+<h3>Text-button</h3>
+<div >
+    <c-button btnType="text"></c-button>
+    <c-button [disabled]="true" btnType="text"></c-button>
+</div>
+
+
+<h3>Outlined</h3>
+<div class="container">
+    <c-button btnType="outlined"></c-button>
+    <c-button [disabled]="true" btnType="outlined"></c-button>
+</div>
+
+<h3>Custom text</h3>
+<c-button text="custom"></c-button>
+
