@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "preserveSymlinks": true,
             "outputPath": "dist/corny-CE",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -45,7 +46,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "corny-CE"
+    }
+  },
+  "defaultProject": "corny-CE",
+  "cli": {
+    "analytics": "d1c0f241-993c-45ec-a8b4-e625689cf60e"
+  }
 }
