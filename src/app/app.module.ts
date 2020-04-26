@@ -9,7 +9,6 @@ import { SearchbarComponent, HideLinkComponent, HamburgerMenuComponent, TreeButt
 import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
 
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
-import { HamburgerMenuExComponent } from './examples/hamburger-menu/hamburger-menu.component';
 
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -24,8 +23,6 @@ import { TreeButtonExComponent } from './examples/tree-button/tree-button.compon
     SearchbarComponent,
     HideLinkExComponent,
     HideLinkComponent,
-    HamburgerMenuExComponent,
-    HamburgerMenuComponent,
     TreeButtonExComponent,
     TreeButtonComponent
   ],
@@ -38,7 +35,6 @@ import { TreeButtonExComponent } from './examples/tree-button/tree-button.compon
   entryComponents:[
     SearchbarExComponent,
     HideLinkExComponent,
-    HamburgerMenuExComponent,
     TreeButtonExComponent
   ],
   providers: [],
