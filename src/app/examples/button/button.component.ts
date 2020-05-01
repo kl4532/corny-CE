@@ -12,4 +12,8 @@ export class ButtonExComponent implements OnInit {
   ngOnInit() {
   }
 
+  show() {
+    alert("message")
+  }
+
 }
