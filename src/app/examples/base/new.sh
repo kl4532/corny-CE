@@ -20,24 +20,32 @@ else
         if [ "$f" == "new.sh" ] ; then
                 continue;
         fi
-        sed -i "s/${search^}Component/${replace^}Component/g" $f
+        sed -i "s/${search^}ExComponent/${replace^}ExComponent/g" $f
         sed -i "s/${search}/${replace}/g" $f
         mv "$f" ${f/${search}/${replace}}
         echo "File name changed to ${f/${search}/${replace}}"
     done
+
+    # Add component to HTML file
+    echo "<c-${replace}></c-${replace}>" >> ${replace}.component.html
 
     rm new.sh
 fi
 
 exComponent=${replace^}ExComponent,
 component=${replace^}Component,
-# import="import ${component^}ExComponent  from \'.\/examples\/${component}\/${component}.component\'";
+importEx="import \{ ${exComponent} \}  from \'.\/examples\/${replace}\/${replace}.component\'";
 
 cd ../../
-sed -i "/declarations: \[/ a ${exComponent}" app.component.ts
-sed -i "/declarations: \[/ a ${component}" app.component.ts
+sed -i "/Examples imports addedByScript/ a ${importEx}" app.component.ts
+sed -i "/Components imports addedByScript/ a ${component}" app.component.ts
 
-sed -i "/entryComponents: \[/ a ${exComponent}" app.component.ts
-sed -i "/components \= \[/ a ${exComponent}" app.component.ts
-# sed -i "/components \= \[/ a ${import}" app.component.ts
+sed -i "/Components added by script/ a ${exComponent}" app.component.ts
+
+sed -i "/Declarations added by script/ a ${exComponent}" app.component.ts
+sed -i "/Declarations added by script/ a ${component}" app.component.ts
+sed -i "/Entries added by script/ a ${exComponent}" app.component.ts
+
+
+
 
