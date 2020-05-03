@@ -1,6 +1,11 @@
 import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver, NgModule } from '@angular/core';
 import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
-import { SearchbarComponent, HideLinkComponent, TreeButtonComponent, ButtonComponent } from 'corny-components';
+import { 
+  SearchbarComponent, 
+  HideLinkComponent, 
+  TreeButtonComponent, 
+  ButtonComponent 
+} from 'corny-components';
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
 import { ButtonExComponent } from './examples/button/button.component';
@@ -55,7 +60,7 @@ export class AppComponent {
     FormsModule,
     ReactiveFormsModule
   ],
-  entryComponents:[
+  entryComponents: [
     SearchbarExComponent,
     HideLinkExComponent,
     TreeButtonExComponent,
