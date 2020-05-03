@@ -1,17 +1,25 @@
 import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver, NgModule } from '@angular/core';
-import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { 
   SearchbarComponent, 
   HideLinkComponent, 
   TreeButtonComponent, 
-  ButtonComponent 
+  ButtonComponent,
+// Components imports addedByScript
+CheckboxComponent,
+
 } from 'corny-components';
+
+import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
 import { ButtonExComponent } from './examples/button/button.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// Examples imports addedByScript 
+import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
+
 
 @Component({
   selector: 'app-root',
@@ -23,7 +31,9 @@ export class AppComponent {
     SearchbarExComponent,
     HideLinkExComponent,
     TreeButtonExComponent,
-    ButtonExComponent
+    ButtonExComponent,
+    // Components added by script
+CheckboxExComponent,
   ];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
 
@@ -52,7 +62,10 @@ export class AppComponent {
     TreeButtonExComponent,
     TreeButtonComponent,
     ButtonExComponent,
-    ButtonComponent
+    ButtonComponent,
+    // Declarations added by script
+CheckboxComponent,
+CheckboxExComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,6 +78,8 @@ export class AppComponent {
     HideLinkExComponent,
     TreeButtonExComponent,
     ButtonExComponent,
+    // Entries added by script
+CheckboxExComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
