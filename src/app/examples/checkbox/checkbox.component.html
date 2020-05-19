@@ -23,3 +23,8 @@
 <div>
     <c-checkbox val='label right' labelPosition='right'></c-checkbox>
 </div>
+<h2>Checked - {{ checked }}</h2>
+<div>
+    <c-checkbox [selected] = "checked" (change)="checked = !checked"></c-checkbox>
+</div>
+

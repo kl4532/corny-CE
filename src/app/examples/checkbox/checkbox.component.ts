@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ex-checkbox',
@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CheckboxExComponent implements OnInit {
 
+  checked: boolean = false;
   constructor() {}
 
   ngOnInit() {}
