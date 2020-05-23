@@ -9,6 +9,7 @@ import {
   TreeButtonComponent, 
   ButtonComponent,
 // Components imports addedByScript
+DropdownComponent,
 CheckboxComponent,
 
 } from 'corny-components';
@@ -18,6 +19,7 @@ import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
 import { ButtonExComponent } from './examples/button/button.component';
 // Examples imports addedByScript 
+import { DropdownExComponent, }  from './examples/dropdown/dropdown.component'
 import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
 
 
@@ -33,6 +35,7 @@ export class AppComponent {
     TreeButtonExComponent,
     ButtonExComponent,
     // Components added by script
+DropdownExComponent,
 CheckboxExComponent,
   ];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
@@ -64,6 +67,8 @@ CheckboxExComponent,
     ButtonExComponent,
     ButtonComponent,
     // Declarations added by script
+DropdownComponent,
+DropdownExComponent,
 CheckboxComponent,
 CheckboxExComponent,
   ],
@@ -79,6 +84,7 @@ CheckboxExComponent,
     TreeButtonExComponent,
     ButtonExComponent,
     // Entries added by script
+DropdownExComponent,
 CheckboxExComponent,
   ],
   providers: [],
