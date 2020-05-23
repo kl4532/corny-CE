@@ -1,5 +1,5 @@
 #!/bin/bash
-# To replace component names run -> bash replace.sh base <newComponentName> 
+# To replace component names run -> bash new.sh base <newComponentName> 
 
 search=$1
 replace=$2
