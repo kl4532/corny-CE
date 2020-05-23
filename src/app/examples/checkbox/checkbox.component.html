@@ -9,13 +9,15 @@
 <div>
     <c-checkbox val='label 2'></c-checkbox>
 </div>
+
 <h2>Preselection</h2>
 <div>
-    <c-checkbox [selected]="true" val='label 1'></c-checkbox>
+    <c-checkbox [checked]="true" val='label 1'></c-checkbox>
 </div>
 <div>
     <c-checkbox val='label 2'></c-checkbox>
 </div>
+
 <h2>Label position</h2>
 <div>
     <c-checkbox val='label left' labelPosition='left'></c-checkbox>
@@ -23,8 +25,8 @@
 <div>
     <c-checkbox val='label right' labelPosition='right'></c-checkbox>
 </div>
+
 <h2>Checked - {{ checked }}</h2>
 <div>
-    <c-checkbox [selected] = "checked" (change)="checked = !checked"></c-checkbox>
+    <c-checkbox [checked]="checked" (change)="checked = !checked"></c-checkbox>
 </div>
-
