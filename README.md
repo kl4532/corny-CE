@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## To link corny-components to CCE locally
+
+1. Create link in corny-components project (described in project README) using `npm link`
+2. In CCE run `npm link "corny-components"`
