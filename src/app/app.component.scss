@@ -1,3 +1,52 @@
-.container{
-    position: absolute;
+.container {
+    display: grid;
+  
+    grid-template-areas:
+      "header header header "
+      "nav content content"
+      "nav content content";
+
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 0px;
+  
+    height: 100vh;
+
+    header {
+        grid-area: header;
+        background-color: #ffcf00; 
+        // yellow from logo
+    }
+
+    nav {
+        grid-area: nav;
+        background-color: green;
+
+    }
+
+    main {
+        grid-area: content;
+        padding: 10px;
+    }
+}
+
+.component{
+    // position: absolute;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        padding: 7px 10px;  
+        margin: 0;
+        cursor: pointer;
+        font-size: large;
+
+        &:focus, &:hover {
+            background-color: yellowgreen;
+        }
+        color: #2800c0;         
+    }
 }

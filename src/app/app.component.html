@@ -1,6 +1,17 @@
-<h1>Select component:</h1>
 
-<ul *ngFor='let component of components'>
-  <li (click)='addComponent(component)'>{{ component.name.slice(0, -11) }}</li>
-</ul>
-<ng-template #container class="container"></ng-template>
+
+<div class="container">
+  <header>
+    <h2>Corny Components Explorer - please select component</h2>
+  </header>
+
+  <nav>
+    <ul *ngFor='let component of components'>
+      <li tabindex="0" c-focused (click)='addComponent(component)'>{{ component.name.slice(0, -11) }}</li>
+    </ul>
+  </nav>
+
+  <main>
+    <ng-template #container class="component"></ng-template>
+  </main>
+</div>
