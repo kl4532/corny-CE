@@ -11,6 +11,7 @@ import {
 // Components imports addedByScript
 DropdownComponent,
 CheckboxComponent,
+FocusedDirective,
 
 } from 'corny-components';
 
@@ -37,7 +38,7 @@ export class AppComponent {
     // Components added by script
 DropdownExComponent,
 CheckboxExComponent,
-  ];
+];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
@@ -71,6 +72,7 @@ DropdownComponent,
 DropdownExComponent,
 CheckboxComponent,
 CheckboxExComponent,
+FocusedDirective
   ],
   imports: [
     BrowserModule,
