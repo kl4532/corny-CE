@@ -3,15 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { 
-  SearchbarComponent, 
-  HideLinkComponent, 
-  TreeButtonComponent, 
+import {
+  SearchbarComponent,
+  HideLinkComponent,
+  TreeButtonComponent,
   ButtonComponent,
 // Components imports addedByScript
+ChipsComponent,
 DropdownComponent,
 CheckboxComponent,
-FocusedDirective,
+FocusedDirective
 
 } from 'corny-components';
 
@@ -19,7 +20,8 @@ import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
 import { ButtonExComponent } from './examples/button/button.component';
-// Examples imports addedByScript 
+// Examples imports addedByScript
+import { ChipsExComponent, }  from './examples/chips/chips.component'
 import { DropdownExComponent, }  from './examples/dropdown/dropdown.component'
 import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
 
@@ -36,23 +38,29 @@ export class AppComponent {
     TreeButtonExComponent,
     ButtonExComponent,
     // Components added by script
+ChipsExComponent,
 DropdownExComponent,
 CheckboxExComponent,
 ];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
+  selectedComponent: any;
 
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
+  constructor(
+    private componentFactoryResolver: ComponentFactoryResolver) {}
 
   ngOnInit() {
+    this.components.sort();
   }
 
   addComponent(component: any) {
     //clean container
-    this.container.clear();    
+    this.container.clear();
     //add component example
     const factory = this.componentFactoryResolver.resolveComponentFactory(component);
     const ref = this.container.createComponent(factory);
     ref.changeDetectorRef.detectChanges();
+
+    this.selectedComponent = component;
   }
 }
 
@@ -68,6 +76,8 @@ CheckboxExComponent,
     ButtonExComponent,
     ButtonComponent,
     // Declarations added by script
+ChipsComponent,
+ChipsExComponent,
 DropdownComponent,
 DropdownExComponent,
 CheckboxComponent,
@@ -86,6 +96,7 @@ FocusedDirective
     TreeButtonExComponent,
     ButtonExComponent,
     // Entries added by script
+ChipsExComponent,
 DropdownExComponent,
 CheckboxExComponent,
   ],
