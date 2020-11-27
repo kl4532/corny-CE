@@ -3,7 +3,6 @@
   
     grid-template-areas:
       "header header header "
-      "nav content content"
       "nav content content";
 
     grid-template-columns: 200px 1fr 200px;
@@ -14,24 +13,24 @@
 
     header {
         grid-area: header;
-        background-color: #ffcf00; 
-        // yellow from logo
+        background-color: var(--main-color);
+        color: white;
+        box-shadow: 0px 3px 5px 0px var(--nav-shadow-color);
+        z-index: 1000;
+        h3 {
+            margin-left: 5px;
+        }
     }
 
     nav {
         grid-area: nav;
-        background-color: green;
-
+        box-shadow: 3px 0px 5px 0px var(--nav-shadow-color);
     }
 
     main {
         grid-area: content;
         padding: 10px;
     }
-}
-
-.component{
-    // position: absolute;
 }
 
 ul {
@@ -45,8 +44,7 @@ ul {
         font-size: large;
 
         &:focus, &:hover {
-            background-color: yellowgreen;
-        }
-        color: #2800c0;         
+            background-color: var(--nav-hover-color);
+        }      
     }
 }
