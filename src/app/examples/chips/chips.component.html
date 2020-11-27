@@ -1,0 +1,16 @@
+<c-chips [options]="options"></c-chips>
+
+<ng-container *ngIf="options">
+  <h4>Active chips:</h4>
+  <ul *ngFor="let option of options">
+    <li *ngIf="option.selected">{{ option.name }}</li>
+  </ul>
+
+  <h4>Inactive chips:</h4>
+  <ul *ngFor="let option of options; let i=index">
+    <li *ngIf="!option.selected">{{ option.name }}</li>
+  </ul>
+</ng-container>
+
+
+
