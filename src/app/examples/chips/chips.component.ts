@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Chip } from 'corny-components/lib/models/chip';
+import {Chip} from "corny-components/lib/models/chip";
 
 @Component({
   selector: 'ex-chips',
