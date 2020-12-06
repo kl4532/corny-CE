@@ -2,6 +2,7 @@ import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver, NgMod
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { dependencies } from '../../package.json';
 
 import {
   SearchbarComponent,
@@ -43,12 +44,14 @@ CheckboxExComponent,
 ];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
   selectedComponent: any;
+  version: string;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver) {}
 
   ngOnInit() {
     this.components.sort();
+    this.version = "v" + dependencies["corny-components"].substring(1, dependencies["corny-components"].length);
   }
 
   addComponent(component: any) {
