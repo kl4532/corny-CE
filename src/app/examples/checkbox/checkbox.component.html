@@ -1,4 +1,4 @@
-<h2>Basic</h2>
+<h3>Basic</h3>
 <div>
     <label for="">custom label</label>
     <c-checkbox></c-checkbox>
@@ -10,7 +10,7 @@
     <c-checkbox val='label 2'></c-checkbox>
 </div>
 
-<h2>Preselection</h2>
+<h3>Preselection</h3>
 <div>
     <c-checkbox [checked]="true" val='label 1'></c-checkbox>
 </div>
@@ -18,7 +18,7 @@
     <c-checkbox val='label 2'></c-checkbox>
 </div>
 
-<h2>Label position</h2>
+<h3>Label position</h3>
 <div>
     <c-checkbox val='label left' labelPosition='left'></c-checkbox>
 </div>
@@ -26,7 +26,7 @@
     <c-checkbox val='label right' labelPosition='right'></c-checkbox>
 </div>
 
-<h2>Checked - {{ checked }}</h2>
+<h3>Checked - {{ checked }}</h3>
 <div>
     <c-checkbox [checked]="checked" (change)="checked = !checked"></c-checkbox>
 </div>
