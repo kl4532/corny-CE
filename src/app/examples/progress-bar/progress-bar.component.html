@@ -1,0 +1,7 @@
+<h3>Timeout</h3>
+
+<c-progress-bar (finished)="timesUp=$event; started = false" [timeout]="5" [start]="started"></c-progress-bar>
+<div>
+  <c-button (click)="started = !started" [disabled]="started" text="Start"></c-button>
+</div>
+
