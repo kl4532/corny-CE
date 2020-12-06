@@ -11,8 +11,7 @@ import {
 // Components imports addedByScript
 ChipsComponent,
 DropdownComponent,
-CheckboxComponent,
-FocusedDirective
+CheckboxComponent
 
 } from 'corny-components';
 
@@ -81,8 +80,7 @@ ChipsExComponent,
 DropdownComponent,
 DropdownExComponent,
 CheckboxComponent,
-CheckboxExComponent,
-FocusedDirective
+CheckboxExComponent
   ],
   imports: [
     BrowserModule,
