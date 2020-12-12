@@ -1,7 +1,20 @@
-<h3>Timeout</h3>
-
-<c-progress-bar (finished)="timesUp=$event; started = false" [timeout]="5" [start]="started"></c-progress-bar>
+<h3>Progress</h3>
 <div>
-  <c-button (click)="started = !started" [disabled]="started" text="Start"></c-button>
+  <p>{{valueProgress | number: '1.0-0'}} %</p>
+  <c-progress-bar (finished)="timesUp=$event; started = false" [value]="valueProgress"></c-progress-bar>
+  <c-button (click)="startProgress()" [disabled]="started" text="Start"></c-button>
+</div>
+
+<h3>Countdown</h3>
+<div>
+  <p>{{valueCountdown | number: '1.0-0'}} %</p>
+  <c-progress-bar (finished)="timesUp=$event; started = false" [value]="valueCountdown"></c-progress-bar>
+  <c-button (click)="startCountdown()" [disabled]="started" text="Start"></c-button>
+</div>
+
+<h3>Indeterminate</h3>
+<div>
+  <p>? %</p>
+  <c-progress-bar [mode]="'indeterminate'"></c-progress-bar>
 </div>
 
