@@ -11,6 +11,8 @@ export class ProgressBarExComponent implements OnInit {
   timesUp: boolean;
   valueCountdown: number;
   valueProgress: number;
+  progressStarted: boolean;
+  countdownStarted: boolean;
 
   constructor() {}
 
@@ -20,20 +22,36 @@ export class ProgressBarExComponent implements OnInit {
   }
 
   startCountdown() {
+    this.valueCountdown = 100;
+    this.countdownStarted = true;
     const interval = setInterval(()=> {
       if(this.valueCountdown<=0) {
+        this.countdownStarted = false;
         clearInterval(interval);
+        return;
       }
-      this.valueCountdown = this.valueCountdown - 0.1;
-    }, 100);
+      if(this.valueCountdown-5 >= 0){
+        this.valueCountdown = this.valueCountdown - 5;
+      } else {
+        this.valueCountdown = 0;
+      }
+    }, 1000);
   }
 
   startProgress() {
+    this.valueProgress = 0;
+    this.progressStarted = true;
     const interval = setInterval(()=> {
       if(this.valueProgress>=100) {
+        this.progressStarted = false;
         clearInterval(interval);
+        return;
       }
-      this.valueProgress = this.valueProgress + 0.1;
+      if(this.valueProgress+1 <= 100){
+        this.valueProgress = this.valueProgress + 1;
+      } else {
+        this.valueProgress = 100;
+      }
     }, 100);
   }
   reset() {
