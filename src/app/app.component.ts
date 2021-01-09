@@ -1,21 +1,6 @@
-import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
 import { dependencies } from '../../package.json';
 
-import {
-  SearchbarComponent,
-  HideLinkComponent,
-  TreeButtonComponent,
-  ButtonComponent,
-// Components imports addedByScript
-ProgressBarComponent,
-ChipsComponent,
-DropdownComponent,
-CheckboxComponent
-
-} from 'corny-components';
 
 import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
@@ -40,10 +25,10 @@ export class AppComponent {
     TreeButtonExComponent,
     ButtonExComponent,
     // Components added by script
-ProgressBarExComponent,
-ChipsExComponent,
-DropdownExComponent,
-CheckboxExComponent,
+    ProgressBarExComponent,
+    ChipsExComponent,
+    DropdownExComponent,
+    CheckboxExComponent,
 ];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
   selectedComponent: any;
@@ -68,46 +53,3 @@ CheckboxExComponent,
     this.selectedComponent = component;
   }
 }
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    SearchbarExComponent,
-    SearchbarComponent,
-    HideLinkExComponent,
-    HideLinkComponent,
-    TreeButtonExComponent,
-    TreeButtonComponent,
-    ButtonExComponent,
-    ButtonComponent,
-    // Declarations added by script
-ProgressBarComponent,
-ProgressBarExComponent,
-ChipsComponent,
-ChipsExComponent,
-DropdownComponent,
-DropdownExComponent,
-CheckboxComponent,
-CheckboxExComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  entryComponents: [
-    SearchbarExComponent,
-    HideLinkExComponent,
-    TreeButtonExComponent,
-    ButtonExComponent,
-    // Entries added by script
-ProgressBarExComponent,
-ChipsExComponent,
-DropdownExComponent,
-CheckboxExComponent,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
