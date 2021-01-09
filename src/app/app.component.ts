@@ -1,8 +1,8 @@
-import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver, NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { dependencies } from '../../package.json';
+import {Component, ViewChild, ViewContainerRef, ComponentFactoryResolver, NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from './app-routing.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {dependencies} from '../../package.json';
 
 import {
   SearchbarComponent,
@@ -10,22 +10,22 @@ import {
   TreeButtonComponent,
   ButtonComponent,
 // Components imports addedByScript
-ProgressBarComponent,
-ChipsComponent,
-DropdownComponent,
-CheckboxComponent
+  ProgressBarComponent,
+  ChipsComponent,
+  DropdownComponent,
+  CheckboxComponent
 
 } from 'corny-components';
 
-import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
-import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
-import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
-import { ButtonExComponent } from './examples/button/button.component';
+import {SearchbarExComponent} from './examples/searchbar/searchbar.component';
+import {HideLinkExComponent} from './examples/hide-link/hide-link.component';
+import {TreeButtonExComponent} from './examples/tree-button/tree-button.component';
+import {ButtonExComponent} from './examples/button/button.component';
 // Examples imports addedByScript
-import { ProgressBarExComponent, }  from './examples/progress-bar/progress-bar.component'
-import { ChipsExComponent, }  from './examples/chips/chips.component'
-import { DropdownExComponent, }  from './examples/dropdown/dropdown.component'
-import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
+import {ProgressBarExComponent,} from './examples/progress-bar/progress-bar.component'
+import {ChipsExComponent,} from './examples/chips/chips.component'
+import {DropdownExComponent,} from './examples/dropdown/dropdown.component'
+import {CheckboxExComponent,} from './examples/checkbox/checkbox.component'
 
 
 @Component({
@@ -40,17 +40,18 @@ export class AppComponent {
     TreeButtonExComponent,
     ButtonExComponent,
     // Components added by script
-ProgressBarExComponent,
-ChipsExComponent,
-DropdownExComponent,
-CheckboxExComponent,
-];
+    ProgressBarExComponent,
+    ChipsExComponent,
+    DropdownExComponent,
+    CheckboxExComponent,
+  ];
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
   selectedComponent: any;
   version: string;
 
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver) {}
+    private componentFactoryResolver: ComponentFactoryResolver) {
+  }
 
   ngOnInit() {
     this.components.sort();
@@ -81,14 +82,14 @@ CheckboxExComponent,
     ButtonExComponent,
     ButtonComponent,
     // Declarations added by script
-ProgressBarComponent,
-ProgressBarExComponent,
-ChipsComponent,
-ChipsExComponent,
-DropdownComponent,
-DropdownExComponent,
-CheckboxComponent,
-CheckboxExComponent
+    ProgressBarComponent,
+    ProgressBarExComponent,
+    ChipsComponent,
+    ChipsExComponent,
+    DropdownComponent,
+    DropdownExComponent,
+    CheckboxComponent,
+    CheckboxExComponent
   ],
   imports: [
     BrowserModule,
@@ -102,12 +103,13 @@ CheckboxExComponent
     TreeButtonExComponent,
     ButtonExComponent,
     // Entries added by script
-ProgressBarExComponent,
-ChipsExComponent,
-DropdownExComponent,
-CheckboxExComponent,
+    ProgressBarExComponent,
+    ChipsExComponent,
+    DropdownExComponent,
+    CheckboxExComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

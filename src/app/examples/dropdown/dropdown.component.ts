@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'ex-dropdown',
@@ -9,8 +9,10 @@ export class DropdownExComponent implements OnInit {
 
   options = ["Poland", "Portugal", "Pony", "Panama", "France", "Austria", "Oman", "Poltergeist", "Puertorico"];
 
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() {}
-  
+  ngOnInit() {
+  }
+
 }

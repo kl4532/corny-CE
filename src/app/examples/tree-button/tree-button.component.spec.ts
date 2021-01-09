@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { TreeButtonComponent } from './tree-button.component';
+import {TreeButtonComponent} from './tree-button.component';
 
 describe('TreeButtonComponent', () => {
   let component: TreeButtonComponent;
@@ -8,9 +8,9 @@ describe('TreeButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TreeButtonComponent ]
+      declarations: [TreeButtonComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

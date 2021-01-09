@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 import {Chip} from "corny-components/lib/models/chip";
 
 @Component({
@@ -8,7 +8,8 @@ import {Chip} from "corny-components/lib/models/chip";
 })
 export class ChipsExComponent implements OnInit {
 
-  constructor() {}
+  constructor() {
+  }
 
   options: Chip[] = []
 
