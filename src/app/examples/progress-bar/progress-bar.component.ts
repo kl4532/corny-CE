@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'ex-progress-bar',
@@ -14,7 +14,8 @@ export class ProgressBarExComponent implements OnInit {
   progressStarted: boolean;
   countdownStarted: boolean;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {
     this.valueProgress = 0;
@@ -24,13 +25,13 @@ export class ProgressBarExComponent implements OnInit {
   startCountdown() {
     this.valueCountdown = 100;
     this.countdownStarted = true;
-    const interval = setInterval(()=> {
-      if(this.valueCountdown<=0) {
+    const interval = setInterval(() => {
+      if (this.valueCountdown <= 0) {
         this.countdownStarted = false;
         clearInterval(interval);
         return;
       }
-      if(this.valueCountdown-5 >= 0){
+      if (this.valueCountdown - 5 >= 0) {
         this.valueCountdown = this.valueCountdown - 5;
       } else {
         this.valueCountdown = 0;
@@ -41,19 +42,20 @@ export class ProgressBarExComponent implements OnInit {
   startProgress() {
     this.valueProgress = 0;
     this.progressStarted = true;
-    const interval = setInterval(()=> {
-      if(this.valueProgress>=100) {
+    const interval = setInterval(() => {
+      if (this.valueProgress >= 100) {
         this.progressStarted = false;
         clearInterval(interval);
         return;
       }
-      if(this.valueProgress+1 <= 100){
+      if (this.valueProgress + 1 <= 100) {
         this.valueProgress = this.valueProgress + 1;
       } else {
         this.valueProgress = 100;
       }
     }, 100);
   }
+
   reset() {
     this.started = false;
     this.timesUp = true;

@@ -1,51 +1,52 @@
 .container {
-    display: grid;
+  display: grid;
 
-    grid-template-areas:
+  grid-template-areas:
       "header header header "
       "nav content content";
 
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: auto 1fr auto;
-    grid-gap: 0px;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 0px;
 
-    height: 100vh;
+  height: 100vh;
 
-    header {
-      grid-area: header;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 5px 0 5px;
-      background-color: var(--main-color);
-      color: white;
-      box-shadow: 0px 3px 5px 0px var(--nav-shadow-color);
-      z-index: 1000;
-    }
+  header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 5px;
+    background-color: var(--main-color);
+    color: white;
+    box-shadow: 0px 3px 5px 0px var(--nav-shadow-color);
+    z-index: 1000;
+  }
 
-    nav {
-        grid-area: nav;
-        box-shadow: 3px 0px 5px 0px var(--nav-shadow-color);
-    }
+  nav {
+    grid-area: nav;
+    box-shadow: 3px 0px 5px 0px var(--nav-shadow-color);
+  }
 
-    main {
-        grid-area: content;
-        padding: 10px;
-    }
+  main {
+    grid-area: content;
+    padding: 10px;
+  }
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li {
-        padding: 7px 10px;
-        margin: 0;
-        cursor: pointer;
-        font-size: large;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 
-        &:focus, &:hover {
-            background-color: var(--nav-hover-color);
-        }
+  li {
+    padding: 7px 10px;
+    margin: 0;
+    cursor: pointer;
+    font-size: large;
+
+    &:focus, &:hover {
+      background-color: var(--nav-hover-color);
     }
+  }
 }

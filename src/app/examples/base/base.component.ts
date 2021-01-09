@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'ex-base',
@@ -7,8 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BaseExComponent implements OnInit {
 
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit() {}
-  
+  ngOnInit() {
+  }
+
 }

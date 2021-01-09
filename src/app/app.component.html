@@ -6,7 +6,9 @@
 
   <nav>
     <ul *ngFor='let component of components' class="components-list">
-      <li [style.font-weight]="component === selectedComponent ? 'bold' : 'normal'" tabindex="0" c-focused (click)='addComponent(component)'>{{ component.name.slice(0, -11) }}</li>
+      <li [style.font-weight]="component === selectedComponent ? 'bold' : 'normal'" tabindex="0" c-focused
+          (click)='addComponent(component)'>{{ component.name.slice(0, -11) }}
+      </li>
     </ul>
   </nav>
 

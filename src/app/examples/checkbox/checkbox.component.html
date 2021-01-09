@@ -1,32 +1,32 @@
 <h3>Basic</h3>
 <div>
-    <label for="">custom label</label>
-    <c-checkbox></c-checkbox>
+  <label for="">custom label</label>
+  <c-checkbox></c-checkbox>
 </div>
 <div>
-    <c-checkbox val='label 1'></c-checkbox>
+  <c-checkbox val='label 1'></c-checkbox>
 </div>
 <div>
-    <c-checkbox val='label 2'></c-checkbox>
+  <c-checkbox val='label 2'></c-checkbox>
 </div>
 
 <h3>Preselection</h3>
 <div>
-    <c-checkbox [checked]="true" val='label 1'></c-checkbox>
+  <c-checkbox [checked]="true" val='label 1'></c-checkbox>
 </div>
 <div>
-    <c-checkbox val='label 2'></c-checkbox>
+  <c-checkbox val='label 2'></c-checkbox>
 </div>
 
 <h3>Label position</h3>
 <div>
-    <c-checkbox val='label left' labelPosition='left'></c-checkbox>
+  <c-checkbox val='label left' labelPosition='left'></c-checkbox>
 </div>
 <div>
-    <c-checkbox val='label right' labelPosition='right'></c-checkbox>
+  <c-checkbox val='label right' labelPosition='right'></c-checkbox>
 </div>
 
 <h3>Checked - {{ checked }}</h3>
 <div>
-    <c-checkbox [checked]="checked" (change)="checked = !checked"></c-checkbox>
+  <c-checkbox [checked]="checked" (change)="checked = !checked"></c-checkbox>
 </div>
