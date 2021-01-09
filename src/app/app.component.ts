@@ -1,7 +1,6 @@
 import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
 import { dependencies } from '../../package.json';
 
-
 import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
 import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
@@ -53,46 +52,3 @@ export class AppComponent {
     this.selectedComponent = component;
   }
 }
-
-@NgModule({
-  declarations: [
-    AppComponent,
-    SearchbarExComponent,
-    SearchbarComponent,
-    HideLinkExComponent,
-    HideLinkComponent,
-    TreeButtonExComponent,
-    TreeButtonComponent,
-    ButtonExComponent,
-    ButtonComponent,
-    // Declarations added by script
-ProgressBarComponent,
-ProgressBarExComponent,
-ChipsComponent,
-ChipsExComponent,
-DropdownComponent,
-DropdownExComponent,
-CheckboxComponent,
-CheckboxExComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  entryComponents: [
-    SearchbarExComponent,
-    HideLinkExComponent,
-    TreeButtonExComponent,
-    ButtonExComponent,
-    // Entries added by script
-ProgressBarExComponent,
-ChipsExComponent,
-DropdownExComponent,
-CheckboxExComponent,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
