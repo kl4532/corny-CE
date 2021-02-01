@@ -6,8 +6,8 @@ import { HideLinkExComponent } from './examples/hide-link/hide-link.component';
 import { TreeButtonExComponent } from './examples/tree-button/tree-button.component';
 import { ButtonExComponent } from './examples/button/button.component';
 // Examples imports addedByScript
+import { SelectButtonExComponent, }  from './examples/selectButton/selectButton.component'
 import { ProgressBarExComponent, }  from './examples/progress-bar/progress-bar.component'
-import { ChipsExComponent, }  from './examples/chips/chips.component'
 import { DropdownExComponent, }  from './examples/dropdown/dropdown.component'
 import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
 
@@ -24,8 +24,8 @@ export class AppComponent {
     TreeButtonExComponent,
     ButtonExComponent,
     // Components added by script
+SelectButtonExComponent,
     ProgressBarExComponent,
-    ChipsExComponent,
     DropdownExComponent,
     CheckboxExComponent,
 ];

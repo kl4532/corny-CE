@@ -10,9 +10,8 @@ import {
   ButtonComponent,
 // Components imports addedByScript
   ProgressBarComponent,
-  ChipsComponent,
   DropdownComponent,
-  CheckboxComponent
+  CheckboxComponent, SelectButtonComponent
 
 } from 'corny-components';
 
@@ -22,10 +21,10 @@ import { TreeButtonExComponent } from './examples/tree-button/tree-button.compon
 import { ButtonExComponent } from './examples/button/button.component';
 // Examples imports addedByScript
 import { ProgressBarExComponent, }  from './examples/progress-bar/progress-bar.component'
-import { ChipsExComponent, }  from './examples/chips/chips.component'
 import { DropdownExComponent, }  from './examples/dropdown/dropdown.component'
 import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
 import {AppComponent} from "./app.component";
+import {SelectButtonExComponent} from "./examples/selectButton/selectButton.component";
 
 @NgModule({
   declarations: [
@@ -41,12 +40,12 @@ import {AppComponent} from "./app.component";
     // Declarations added by script
     ProgressBarComponent,
     ProgressBarExComponent,
-    ChipsComponent,
-    ChipsExComponent,
     DropdownComponent,
     DropdownExComponent,
     CheckboxComponent,
-    CheckboxExComponent
+    CheckboxExComponent,
+    SelectButtonComponent,
+    SelectButtonExComponent
   ],
   imports: [
     BrowserModule,
@@ -61,9 +60,9 @@ import {AppComponent} from "./app.component";
     ButtonExComponent,
     // Entries added by script
     ProgressBarExComponent,
-    ChipsExComponent,
     DropdownExComponent,
     CheckboxExComponent,
+    SelectButtonExComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
