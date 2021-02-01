@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SelectButton} from "corny-components/lib/models/selectButton";
+import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'ex-selectButton',
@@ -11,7 +12,8 @@ export class SelectButtonExComponent implements OnInit {
   constructor() {
   }
 
-  options: SelectButton[] = []
+  options: SelectButton[] = [];
+  btnForm: FormGroup
 
   ngOnInit() {
     this.options = [
@@ -36,6 +38,14 @@ export class SelectButtonExComponent implements OnInit {
         selected: false
       },
     ];
+
+    this.btnForm = new FormGroup({
+      buttons: new FormControl([]),
+    });
+  }
+
+  logForm() {
+    console.log('form:', this.btnForm);
   }
 
 }

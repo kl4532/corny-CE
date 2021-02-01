@@ -1,16 +1,14 @@
-<c-selectButton [options]="options"></c-selectButton>
+<form [formGroup]="btnForm" >
+  <c-selectButton formControlName="buttons" formControl="value" [options]="options"></c-selectButton>
+</form>
+
 
 <ng-container *ngIf="options">
-  <h4>Active buttons:</h4>
-  <ul *ngFor="let option of options">
-    <li *ngIf="option.selected">{{ option.name }}</li>
-  </ul>
-
-  <h4>Inactive buttons:</h4>
-  <ul *ngFor="let option of options; let i=index">
-    <li *ngIf="!option.selected">{{ option.name }}</li>
+  <h4>Selected buttons:</h4>
+  <ul *ngFor="let btn of btnForm.value.buttons">
+    <li>{{ btn }}</li>
   </ul>
 </ng-container>
-
+<button (click)="logForm()" >Log form</button>
 
 
