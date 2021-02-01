@@ -1,0 +1,16 @@
+<c-selectButton [options]="options"></c-selectButton>
+
+<ng-container *ngIf="options">
+  <h4>Active buttons:</h4>
+  <ul *ngFor="let option of options">
+    <li *ngIf="option.selected">{{ option.name }}</li>
+  </ul>
+
+  <h4>Inactive buttons:</h4>
+  <ul *ngFor="let option of options; let i=index">
+    <li *ngIf="!option.selected">{{ option.name }}</li>
+  </ul>
+</ng-container>
+
+
+
