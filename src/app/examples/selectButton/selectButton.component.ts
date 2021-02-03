@@ -13,7 +13,7 @@ export class SelectButtonExComponent implements OnInit {
   }
 
   options: SelectButton[] = [];
-  btnForm: FormGroup
+  btnForm: FormGroup;
 
   ngOnInit() {
     this.options = [
@@ -40,12 +40,12 @@ export class SelectButtonExComponent implements OnInit {
     ];
 
     this.btnForm = new FormGroup({
-      buttons: new FormControl([]),
+      buttons: new FormControl(''),
     });
   }
 
   logForm() {
-    console.log('form:', this.btnForm);
+    console.log('form:', this.btnForm.value);
   }
 
 }
