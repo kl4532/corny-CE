@@ -40,12 +40,8 @@ export class SelectButtonExComponent implements OnInit {
     ];
 
     this.btnForm = new FormGroup({
-      buttons: new FormControl(''),
+      buttons: new FormControl(['Btn one', 'Btn three']),
     });
-  }
-
-  logForm() {
-    console.log('form:', this.btnForm.value);
   }
 
 }
