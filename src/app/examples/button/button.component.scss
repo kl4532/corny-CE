@@ -1,5 +1,8 @@
 .container {
-  display: inline-block;
+  display: flex;
+  * {
+    margin-right: 1.2em;
+  }
 }
 
 div > c-button:nth-child(1) {
