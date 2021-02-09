@@ -11,7 +11,7 @@ import {
 // Components imports addedByScript
   ProgressBarComponent,
   DropdownComponent,
-  CheckboxComponent, SelectButtonComponent
+  CheckboxComponent, SelectButtonComponent, CButtonDirective
 
 } from 'corny-components';
 
@@ -45,7 +45,8 @@ import {SelectButtonExComponent} from "./examples/selectButton/selectButton.comp
     CheckboxComponent,
     CheckboxExComponent,
     SelectButtonComponent,
-    SelectButtonExComponent
+    SelectButtonExComponent,
+    CButtonDirective
   ],
   imports: [
     BrowserModule,
