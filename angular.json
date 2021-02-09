@@ -29,6 +29,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/corny-components/corny-styles.css",
               "src/styles.scss"
             ],
             "scripts": []
