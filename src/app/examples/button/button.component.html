@@ -1,24 +1,30 @@
 <h3>Button</h3>
 <div class="container">
-  <c-button (click)="show()" btnType="button" text="Primary(click me)"></c-button>
-  <c-button class="c-button-secondary" btnType="button" text="Secondary"></c-button>
-  <c-button class="c-button-success" btnType="button" text="Success"></c-button>
-  <c-button class="c-button-info" btnType="button" text="Info"></c-button>
-  <c-button class="c-button-warning" btnType="button" text="Warning"></c-button>
-  <c-button class="c-button-danger" btnType="button" text="Danger"></c-button>
-  <c-button [disabled]="true" btnType="button" text="disabled"></c-button>
+  <button (click)="show()" class="c-button-primary" btnType="button" text="Test" cButton>Primary(click me)</button>
+  <button class="c-button-secondary" btnType="button" text="Test" cButton>Secondary</button>
+  <button class="c-button-success" btnType="button" text="Test" cButton>Success</button>
+  <button class="c-button-info" btnType="button" text="Test" cButton>Info</button>
+  <button class="c-button-warning" btnType="button" text="Test" cButton>Warning</button>
+  <button class="c-button-danger" text="Test" cButton>Danger</button>
+  <button (click)="show()" [disabled]="true"  class="c-button-primary" btnType="button" text="Test" cButton>Disabled</button>
+
 </div>
 
 <h3>Text-button</h3>
-<div>
-  <c-button btnType="text"></c-button>
-  <c-button [disabled]="true" btnType="text" text="disabled"></c-button>
+<div class="container">
+  <button btnType="text" cButton>Primary</button>
+  <button [disabled]="true" btnType="text" cButton>Disabled</button>
 </div>
 
 
 <h3>Outlined</h3>
 <div class="container">
-  <c-button btnType="outlined"></c-button>
-  <c-button [disabled]="true" btnType="outlined" text="disabled"></c-button>
+  <button class="c-button-primary" btnType="outlined" cButton>Primary</button>
+  <button class="c-button-secondary" btnType="outlined" cButton>Secondary</button>
+  <button class="c-button-success" btnType="outlined" cButton>Success</button>
+  <button class="c-button-info" btnType="outlined" cButton>Info</button>
+  <button class="c-button-warning" btnType="outlined" cButton>Warning</button>
+  <button class="c-button-danger" btnType="outlined" cButton>Danger</button>
+  <button class="c-button-waring" [disabled]="true" btnType="outlined" cButton>Disabled</button>
 </div>
 
