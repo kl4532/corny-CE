@@ -7,15 +7,26 @@
     <p>{{ version }}</p>
   </header>
 
-  <nav>
-    <ul *ngFor='let component of components' class="components-list">
-      <li [style.font-weight]="component === selectedComponent ? 'bold' : 'normal'" tabindex="0" c-focused
-          (click)='addComponent(component)'>{{ component.name.slice(0, -11) }}
-      </li>
-    </ul>
-  </nav>
+  <div class="content">
+    <div class="nav-container" [@enabledStateChange]="sidenavState">
+      <nav>
+        <ul *ngFor='let component of components' class="components-list">
+          <li [style.font-weight]="component === selectedComponent ? 'bold' : 'normal'" tabindex="0" c-focused
+              (click)='addComponent(component)'>{{ component.name.slice(0, -11) }}
+          </li>
+        </ul>
+      </nav>
+      <button class="btn-show-sidenav" (click)="toggleSidenav()">
+        <b *ngIf="sidenavState==='closed'">></b>
+        <b *ngIf="sidenavState==='open'"><</b>
+      </button>
+    </div>
 
-  <main>
-    <ng-template #container class="component"></ng-template>
-  </main>
+
+
+    <main [style.width] = "'100%'">
+      <ng-template #container class="component"></ng-template>
+    </main>
+  </div>
+
 </div>

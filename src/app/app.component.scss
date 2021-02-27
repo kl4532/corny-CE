@@ -1,18 +1,5 @@
 .container {
-  display: grid;
-
-  grid-template-areas:
-      "header header header "
-      "nav content content";
-
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: auto 1fr auto;
-  grid-gap: 0px;
-
-  height: 100vh;
-
   header {
-    grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,6 +8,7 @@
     color: white;
     box-shadow: 0px 3px 5px 0px var(--nav-shadow-color);
     z-index: 1000;
+    height: 10vh;
 
     .banner {
       display: flex;
@@ -34,33 +22,48 @@
         max-height: 3em;
       }
     }
-
   }
 
-  nav {
-    grid-area: nav;
-    box-shadow: 3px 0px 5px 0px var(--nav-shadow-color);
-  }
+  .content {
+    display: flex;
+    height: 90vh;
+    .btn-show-sidenav {
+      border: none;
+      background-color: var(--main-color);
+      width: 2em;
+      color: white;
+    }
 
-  main {
-    grid-area: content;
-    padding: 10px;
-  }
-}
+    .nav-container {
+      display: flex;
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+      nav {
+        min-width: 10em;
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
 
-  li {
-    padding: 7px 10px;
-    margin: 0;
-    cursor: pointer;
-    font-size: large;
+          li {
+            padding: 7px 10px;
+            margin: 0;
+            cursor: pointer;
+            font-size: large;
 
-    &:focus, &:hover {
-      background-color: var(--nav-hover-color);
+            &:focus, &:hover {
+              background-color: var(--nav-hover-color);
+            }
+          }
+        }
+      }
+    }
+
+
+    main {
+      padding: 10px;
     }
   }
+
 }
+
+

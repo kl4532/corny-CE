@@ -25,6 +25,7 @@ import { DropdownExComponent, }  from './examples/dropdown/dropdown.component'
 import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
 import {AppComponent} from "./app.component";
 import {SelectButtonExComponent} from "./examples/selectButton/selectButton.component";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {SelectButtonExComponent} from "./examples/selectButton/selectButton.comp
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   entryComponents: [
     SearchbarExComponent,
