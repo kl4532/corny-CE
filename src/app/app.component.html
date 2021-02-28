@@ -1,28 +1,23 @@
 <div class="container">
   <header>
     <div class="banner">
-      <img class="banner-icon" src="assets/favicon.ico" alt="icon">
+      <button class="btn-show-sidenav" (click)="sidenavOpen = !sidenavOpen"><img src="./assets/hamburger-menu.png" alt=""></button>
       <h3>{{"Corny Components"}}</h3>
+      <img class="banner-icon" src="assets/favicon.ico" alt="icon">
     </div>
     <p>{{ version }}</p>
   </header>
 
   <div class="content">
-    <div class="nav-container" [@enabledStateChange]="sidenavState">
-      <nav>
+    <div *ngIf="sidenavOpen" class="nav-container" [@slideInOut]>
+      <nav (click)="sidenavOpen = !sidenavOpen">
         <ul *ngFor='let component of components' class="components-list">
           <li [style.font-weight]="component === selectedComponent ? 'bold' : 'normal'" tabindex="0" c-focused
-              (click)='addComponent(component)'>{{ component.name.slice(0, -11) }}
+              (click)="addComponent(component); $event.stopImmediatePropagation()">{{ component.name.slice(0, -11) }}
           </li>
         </ul>
       </nav>
-      <button class="btn-show-sidenav" (click)="toggleSidenav()">
-        <b *ngIf="sidenavState==='closed'">></b>
-        <b *ngIf="sidenavState==='open'"><</b>
-      </button>
     </div>
-
-
 
     <main [style.width] = "'100%'">
       <ng-template #container class="component"></ng-template>

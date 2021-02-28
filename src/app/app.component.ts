@@ -18,14 +18,14 @@ import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-    trigger('enabledStateChange', [
-      state('open', style({
-        transform: 'translateX(0)',
-      })),
-      state('closed', style({
-        transform: 'translateX(-90%)',
-      })),
-      transition('* => *', animate('350ms ease-out'))
+    trigger('slideInOut', [
+      transition(':enter', [
+        style({transform: 'translateX(-100%)'}),
+        animate('200ms ease-in', style({transform: 'translateX(0%)'}))
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({transform: 'translateX(-90%)'}))
+      ])
     ])
 
   ]
@@ -46,17 +46,13 @@ SelectButtonExComponent,
   @HostListener('window:resize', ['$event'])
   onResize(event) {
     const w = event.target.innerWidth;
-    if(w<=500) {
-      this.sidenavState = 'closed';
-      return;
-    }
-    this.sidenavState ='open';
+    this.sidenavOpen = w >= 500;
   }
 
   @ViewChild('container', {read: ViewContainerRef, static: true}) container: ViewContainerRef;
   selectedComponent: any;
   version: string;
-  sidenavState = 'open';
+  sidenavOpen = true;
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver) {}
@@ -64,11 +60,11 @@ SelectButtonExComponent,
   ngOnInit() {
     this.components.sort();
     this.version = "v" + dependencies["corny-components"].substring(1, dependencies["corny-components"].length);
+
+    //check window size on init
+    this.sidenavOpen = window.innerWidth >= 500;
   }
 
-  toggleSidenav() {
-    this.sidenavState = this.sidenavState === 'open' ? 'closed' : 'open';
-  }
   addComponent(component: any) {
     //clean container
     this.container.clear();
