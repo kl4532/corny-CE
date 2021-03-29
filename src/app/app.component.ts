@@ -7,6 +7,7 @@ import { TreeButtonExComponent } from './examples/tree-button/tree-button.compon
 import { ButtonExComponent } from './examples/button/button.component';
 import {trigger, transition, animate, style, state} from '@angular/animations'
 // Examples imports addedByScript
+import { ToolbarExComponent, }  from './examples/toolbar/toolbar.component'
 import { SelectButtonExComponent, }  from './examples/selectButton/selectButton.component'
 import { ProgressBarExComponent, }  from './examples/progress-bar/progress-bar.component'
 import { DropdownExComponent, }  from './examples/dropdown/dropdown.component'
@@ -38,6 +39,7 @@ export class AppComponent {
     TreeButtonExComponent,
     ButtonExComponent,
     // Components added by script
+ToolbarExComponent,
 SelectButtonExComponent,
     ProgressBarExComponent,
     DropdownExComponent,

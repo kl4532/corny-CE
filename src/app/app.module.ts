@@ -26,6 +26,8 @@ import { CheckboxExComponent, }  from './examples/checkbox/checkbox.component'
 import {AppComponent} from "./app.component";
 import {SelectButtonExComponent} from "./examples/selectButton/selectButton.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToolbarExComponent} from "./examples/toolbar/toolbar.component";
+import {ToolbarComponent} from "../../../corny-components/projects/corny-components/src/lib/components/toolbar/toolbar.component";
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     CheckboxExComponent,
     SelectButtonComponent,
     SelectButtonExComponent,
-    CButtonDirective
+    CButtonDirective,
+    ToolbarComponent,
+    ToolbarExComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +69,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     ProgressBarExComponent,
     DropdownExComponent,
     CheckboxExComponent,
-    SelectButtonExComponent
+    SelectButtonExComponent,
+    ToolbarExComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
