@@ -11,8 +11,10 @@ import {
 // Components imports addedByScript
   ProgressBarComponent,
   DropdownComponent,
-  CheckboxComponent, SelectButtonComponent, CButtonDirective
-
+  CheckboxComponent,
+  SelectButtonComponent,
+  CButtonDirective,
+  ToolbarComponent
 } from 'corny-components';
 
 import { SearchbarExComponent } from './examples/searchbar/searchbar.component';
@@ -27,7 +29,6 @@ import {AppComponent} from "./app.component";
 import {SelectButtonExComponent} from "./examples/selectButton/selectButton.component";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToolbarExComponent} from "./examples/toolbar/toolbar.component";
-import {ToolbarComponent} from "../../../corny-components/projects/corny-components/src/lib/components/toolbar/toolbar.component";
 
 @NgModule({
   declarations: [
