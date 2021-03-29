@@ -1,18 +1,23 @@
+$c-main: #3269AC;
+$c-shadow: #323232;
+$c-hover: rgba(50, 105, 172, 0.3);
+
+
 .container {
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 5px 0 5px;
-    background-color: var(--main-color);
+    background-color: $c-main;
     color: white;
-    box-shadow: 0px 3px 5px 0px var(--nav-shadow-color);
+    box-shadow: 0px 3px 5px 0px $c-shadow;
     height: 10vh;
     overflow: hidden;
 
     .btn-show-sidenav {
       border: none;
-      background-color: var(--main-color);
+      background-color: $c-main;
       color: white;
       margin: 0.5em;
       img {
@@ -48,7 +53,7 @@
       display: flex;
 
       nav {
-        box-shadow: 2px 1px 2px 0px var(--nav-shadow-color);
+        box-shadow: 2px 1px 2px 0px $c-shadow;
 
         ul {
           list-style: none;
